@@ -7,7 +7,7 @@ public class Developer {
     private UUID ID;
     private String firstName;
     private String lastName;
-    private ArrayList<UUID> Projects;
+    private UUID activeProject;
 
     public void Developer(String fName, String lName)
     {
@@ -17,8 +17,14 @@ public class Developer {
     }
 
     // setter methods
-    public void addProject(UUID projectID)
+    public void setActiveProject(UUID projectID)
     {
+        this.activeProject = projectID;
+    }
+
+    public void removeFromProject()
+    {
+        this.activeProject = null;
     }
 
     // getter methods
@@ -35,5 +41,12 @@ public class Developer {
     public String getLastName()
     {
         return this.lastName;
+    }
+
+    @Override
+    public String toString()
+    {
+        String data = this.ID + " ---> " + this.firstName + " " + this.lastName + " ---> " + activeProject;
+        return data;
     }
 }
