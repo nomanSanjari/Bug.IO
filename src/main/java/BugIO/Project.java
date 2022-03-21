@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class Project {
     private UUID ID;
     private String projectName;
-    private Team team;
     private ArrayList<Issue> issues;
 
     public void Project(String pName, Team team)
@@ -16,11 +15,6 @@ public class Project {
     }
 
     // setter methods
-    public void assignTeam(Team team)
-    {
-        this.team = team;
-    }
-
     public void addIssue(Issue issue)
     {
         this.issues.add(issue);
