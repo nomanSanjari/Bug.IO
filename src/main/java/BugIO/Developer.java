@@ -1,4 +1,4 @@
-package BugIO.Developer;
+package BugIO;
 
 import java.util.UUID; // for generating unique IDs
 import java.util.ArrayList;
@@ -17,6 +17,9 @@ public class Developer {
     }
 
     // setter methods
+    public void addProject(UUID projectID)
+    {
+    }
 
     // getter methods
     public UUID getID()
